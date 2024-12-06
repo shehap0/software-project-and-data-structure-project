@@ -1,66 +1,65 @@
-.Section_top{
+.image-container {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background-image: url(photo/welcome\ 1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    justify-content: center; /* Center the image container */
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of arrows */
+    flex-direction: column; /* Arrange elements vertically */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 40rem;
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay-text {
+    color: white;
+    font-size: 24px;
     text-align: center;
-    justify-content: center;
-    animation: change 10s infinite ease-in-out;
-}
-.content{
+    padding: 10px;
+    position: absolute;
+    top: 80%;
+    left:40%;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 20px;
+    box-sizing: border-box; 
+  }  
+  
+  .arrows {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-
-}
-.content h1{
-    color: #fff;
-    font-size: 60px;
-    letter-spacing: 15px;
-}
-.content h1 span{
-    color: #111;
-}
-.content a{
-    background: #85c1ee;
-    padding: 10px 24px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 20px;
-}
-.content a:hover{
-    background: #034e88;
-    color: #fff;
-}
-@keyframes change{
-    0%
-    {
-        background-image: url(photo/welcome\ 1.jpg);
-    }
-    20%
-    {
-        background-image: url(photo/welcome\ 2.jpg);
-    }
-    40%
-    {
-        background-image: url(photo/welcome\ 3.jpg);
-    }
-    60%
-    {
-        background-image: url(photo/welcome\ 4.jpg);
-    }
-    80%
-    {
-        background-image: url(photo/welcome\ 5.jpg);
-    }
-    100%
-    {
-        background-image: url(photo/welcome\ 6.jpg);
-    }
-}
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Positions the arrows at the left and right */
+    width: 100%;
+    transform: translateY(-50%); /* Vertically center the arrows */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-container:hover .arrows {
+    opacity: 1;
+  }
+  .image-wrapper:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: rgb(30, 167, 185);
+  }
+  
