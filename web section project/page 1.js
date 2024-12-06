@@ -1,7 +1,7 @@
 const images = [
     "photo/welcome 1.jpg", "photo/welcome 3.jpg",  "photo/welcome 5.jpg", "photo/welcome 8.jpg", "photo/welcome 9.jpg",
     "photo/welcome 10.jpg", "photo/welcome 11.jpg",
-    "photo/welcome 13.jpg", "photo/welcome 14.jpg", "photo/welcome 15.jpg", 
+    "photo/welcome 13.jpg", "photo/welcome 15.jpg", 
     "photo/welcome 16.jpg"
   ];
   
@@ -13,11 +13,9 @@ const images = [
     "Mount Fuji - japan",
     "Sakura Temple - japan",
     "Magome - japan",
-    "",
-    "Look at the vast, open sky!",
-    "The beauty of urban life!",
-    "A picture-perfect moment!",
-    "Escape to paradise!"
+    "Tokyo - japan",
+    "New York city",
+    "Valley of Kings - Egypt",
   ];
   
   let currentIndex = 0;
