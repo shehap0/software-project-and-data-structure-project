@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 3</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+        fruits.sort();
+        for(i=0; i<fruits.length; i++)
+        {
+            document.write(fruits[i] + "<br>");
+        }
+        document.write("<br>");
+
+        fruits.pop();
+        for(i=0; i<fruits.length; i++)
+        {
+            document.write(fruits[i] + "<br>");
+        }
+        document.write("<br>");
+
+        <!-- adding orange instead of kiwi cuz we removed kiwi from last loop -->
+        fruits.push("orange");
+        for(i=0; i<fruits.length; i++)
+        {
+            document.write(fruits[i] + "<br>");
+        }
+
+    </script>
+</body>
+</html>

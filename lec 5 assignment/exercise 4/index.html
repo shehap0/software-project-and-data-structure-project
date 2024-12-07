@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 4</title>
+</head>
+<body>
+    <script>
+        function minimum_number(a,b,c,d){
+            const numbers = [a, b, c, d];
+            let min = numbers[0];
+
+            for(let i=1;i<numbers.length;i++)
+            {
+                if (numbers[i] < min) {
+                min = numbers[i];}
+            }
+
+            return min;
+        }
+        
+
+        const result=minimum_number(22,4,6,8);
+        document.write("The minimum number is: "+result+"<br>");
+
+
+        function canPurchase(price,taxrate,balance){
+            const totalCost=price+(price*taxrate); 
+            if(balance>=totalCost)
+            {
+                document.write("Can purchase the product? YES");
+            }else{
+                document.write("Can purchase the product? NO");}
+        }
+        
+        canPurchase(100, 0.1, 120);
+
+    </script>
+
+</body>
+</html>
