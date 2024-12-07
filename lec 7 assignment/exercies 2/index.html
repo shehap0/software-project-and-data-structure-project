@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>exercise 2</title>
+    <style>
+        #hide{
+            position: fixed;
+            top: 10%;
+        }
+        #show{
+            position: fixed;
+            top: 10%;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">this is a text, this is a text, this is a text</h1>
+    <button onclick="hide_text()" id="hide">hide text</button>
+    <button onclick="show_text()" id="show">show text</button>
+    <script>
+        function hide_text() {
+            const text = document.getElementById('text');
+            text.style.display = 'none';
+        }
+
+        function show_text() {
+            const text = document.getElementById('text');
+            text.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
