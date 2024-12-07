@@ -1,0 +1,35 @@
+.container {
+    position: relative;
+    padding: 20px;
+    width: 90%;
+    height: 30rem;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1, h2 {
+    color: black;
+    margin: 0; 
+}
+
+.box-container {
+    display: flex;
+    gap: 10px;
+}
+
+.yellow, .green, .off-white {
+    width: 15rem;
+    height: 10rem;
+    z-index: 2;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.off-white {
+    background-color: rgb(114, 91, 91);
+}

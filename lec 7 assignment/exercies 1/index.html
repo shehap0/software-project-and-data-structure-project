@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>exercise 1</title>
+</head>
+<body>
+    <div class="container"  id="container">
+        <h1>Change background color</h1>
+        <h2>mouse over squares!</h2>
+        <div class="box-container">
+            <div class="yellow" id="yellow-box"></div>
+            <div class="green" id="green-box"></div>
+            <div class="off-white" id="off-white-box"></div>
+        </div>
+    </div>
+    <script>
+        const yellowBox = document.getElementById('yellow-box');
+        const container = document.getElementById('container');
+
+        yellowBox.addEventListener('click', () => {
+            container.style.backgroundColor = 'yellow';
+        });
+
+        const greenbox = document.getElementById('green-box');
+        greenbox.addEventListener('click', () => {
+            container.style.backgroundColor = 'green';
+        });
+
+        const offwhitebox = document.getElementById('off-white-box');
+        offwhitebox.addEventListener('click', () => {
+            container.style.backgroundColor = 'rgb(114, 91, 91)';
+        });
+    </script>
+</body>
+</html>
