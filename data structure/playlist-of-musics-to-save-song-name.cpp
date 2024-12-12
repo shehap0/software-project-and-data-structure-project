@@ -1,52 +1,35 @@
-#include <iostream>                         // shehap
+#include <iostream>
 using namespace std;
+
+// shehap       -> used double linked list
 
 /*
 - add to head
 - add to tail
 - display
-- delete from head
+
+- delete from head                                                                                                                                                                       
 - delete from tail
+- delete from specific place
+- delete specific song 
 - count
 - is empty
-- smallest
-- sum odd
 - copy list
 - display copy
 - find in list
 - reverse list
-- stack
-    1. is Empty
-    2. is Full
-    3. push
-    4. pop
-    5. top element
-    6. display
-- binary search tree
-    1. in Order
-    2. pre Order
-    3. post Order
-    4. insert
-    5. size
-    6. find min
-    7. find max
-    8. remove
-    9. destroy Tree
-    10. is Leaf Node
-    11. max Depth
-- queue
-    1. inqueue
-    2. dequeue
-    3. display
-    4. is empty*/
+*/
+
+
 class node{
     public:
-    int data;
+    string name;
     node* next;
+    node* previous;
 
     node(){
-        data = 0;
-        next =NULL;
+        name="";
+        next=previous=NULL;
     }
 };
 
@@ -62,10 +45,66 @@ class musicPlayList{
         return head == NULL;
     }
 
-    
+    void addToHead(string song){
+        node* newItem=new node;
+        newItem->name=song;
+
+        if(isEmpty())
+        {
+            head=newItem;
+            newItem->next=NULL;
+            newItem->previous=NULL;
+        }else{
+            node* temp=new node;
+            temp=head;
+            head=newItem;
+            newItem->next=temp;
+            temp->previous=newItem;
+            newItem->previous=NULL;
+        }
+    }
+
+    void addToTail(string song){
+        node* newItem=new node;
+        newItem->name=song;
+        if(isEmpty()){
+            head=newItem;
+            newItem->next=NULL;
+            newItem->previous=NULL;
+        }else{
+            node* temp=new node;
+            temp=head;
+            while(temp->next!=NULL)
+            {
+                temp=temp->next;
+            }
+            temp->next=newItem;
+            newItem->next=NULL;
+            newItem->previous=temp;
+        }
+    }
+
+    void display(){
+        node* temp=new node;
+        temp=head;
+        while(temp!=NULL){
+            cout<<"song name: "<<temp->name<<endl;
+            temp=temp->next;
+        }
+        cout<<"----------------------"<<endl;
+    }
 };
 
 int main(){
+    musicPlayList w;
+    w.addToHead("new person, same old mistakes");
+    w.addToHead("die for you");
+    w.addToHead("out of time");
+    w.addToHead("young & dumb");
+    w.addToHead("dont let me go");
+    w.addToTail("after hours");
     
+    w.display();
+
     return 0;
 }
