@@ -7,8 +7,8 @@ using namespace std;
 - add to head
 - add to tail
 - display
+- delete from head    
 
-- delete from head                                                                                                                                                                       
 - delete from tail
 - delete from specific place
 - delete specific song 
@@ -93,6 +93,42 @@ class musicPlayList{
         }
         cout<<"----------------------"<<endl;
     }
+
+    void deleteFromHead(){
+        if(isEmpty())
+        {
+            cout<<"the list is empty"<<endl;
+            return;
+        }else{
+            node* temp=new node;
+            temp=head;
+            temp=temp->next;
+            temp->previous=NULL;
+            delete head;
+            head=temp;
+        }
+    }
+
+    void deleteFromTail(){
+        if(isEmpty())
+        {
+            cout<<"the list is empty"<<endl;
+            return;
+        }else{
+            node* temp=new node;
+            temp=head;
+            node* delptr=new node;
+            delptr=head;
+            while(temp->next!=NULL){
+                temp=temp->next;
+            }
+            
+
+        }
+        
+
+    }
+
 };
 
 int main(){
@@ -106,5 +142,12 @@ int main(){
     
     w.display();
 
+    w.deleteFromHead();
+    w.display();
+
+
+    
+    
+    
     return 0;
 }
