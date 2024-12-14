@@ -11,9 +11,9 @@ using namespace std;
 - delete from head    
 - delete from tail
 - delete specific song 
-
 - count
 - find in list
+
 - copy list
 - display copy
 - reverse list
@@ -160,8 +160,25 @@ class musicPlayList{
             }
             cout<<"total songs: "<<count<<endl;
         }
-        
+    }
 
+    void find(string song){
+        if(isEmpty()){
+            cout<<"the list is empty"<<endl;
+            return;
+        }else{
+            node* temp=head;
+            while(temp!=NULL)
+            {
+                if(temp->name==song)
+                {
+                    cout<<"found song "<<temp->name<<" in the list"<<endl;
+                    return;
+                }
+                temp=temp->next;
+            }
+            cout<<"song not found in the list"<<endl;
+        }
     }
 
 };
@@ -186,6 +203,8 @@ int main(){
     w.display();
 
     w.count();
+
+    w.find("new person, same old mistakes");
 
     
     
