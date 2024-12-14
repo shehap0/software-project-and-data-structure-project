@@ -14,6 +14,7 @@ using namespace std;
 - count
 - find in list
 
+- clear list
 - copy list
 - display copy
 - reverse list
