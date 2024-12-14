@@ -4,19 +4,18 @@ using namespace std;
 // shehap       -> used double linked list
 
 /*
+- is empty
 - add to head
 - add to tail
 - display
 - delete from head    
-
 - delete from tail
-- delete from specific place
+
 - delete specific song 
 - count
-- is empty
+- find in list
 - copy list
 - display copy
-- find in list
 - reverse list
 */
 
@@ -114,19 +113,37 @@ class musicPlayList{
         {
             cout<<"the list is empty"<<endl;
             return;
-        }else{
-            node* temp=new node;
-            temp=head;
-            node* delptr=new node;
-            delptr=head;
-            while(temp->next!=NULL){
-                temp=temp->next;
+        }else if(head->next==NULL){
+            delete head;
+        }else
+        {
+            node* delptr=head;
+            node* temp= new node;
+
+            while(delptr->next!=NULL){
+                delptr=delptr->next;
             }
-            
-
+            temp=delptr->previous;
+            delete delptr;
+            temp->next=NULL;
         }
-        
+    }
 
+    void deleteSong(string song){
+        if(isEmpty()){
+            cout<<"the list is empty"<<endl;
+            return;
+        }else{
+            node* delptr=head;
+            node* temp=new node; 
+            while(delptr->name!=song)
+            {
+                delptr=delptr->next;
+            }
+            temp=delptr->previous;
+            temp->next=delptr->next;
+            delete delptr;
+        }
     }
 
 };
@@ -144,7 +161,11 @@ int main(){
 
     w.deleteFromHead();
     w.display();
+    w.deleteFromTail();
+    w.display();
 
+    w.deleteSong("die for you");
+    w.display();
 
     
     
