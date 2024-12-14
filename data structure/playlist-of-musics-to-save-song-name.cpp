@@ -10,8 +10,8 @@ using namespace std;
 - display
 - delete from head    
 - delete from tail
-
 - delete specific song 
+
 - count
 - find in list
 - copy list
@@ -146,6 +146,24 @@ class musicPlayList{
         }
     }
 
+    void count(){
+        if(isEmpty())
+        {
+            cout<<"the list is empty"<<endl;
+            return;
+        }else{
+            node* temp=head;
+            int count=0;
+            while(temp!=NULL){
+                count++;
+                temp=temp->next;
+            }
+            cout<<"total songs: "<<count<<endl;
+        }
+        
+
+    }
+
 };
 
 int main(){
@@ -166,6 +184,8 @@ int main(){
 
     w.deleteSong("die for you");
     w.display();
+
+    w.count();
 
     
     
