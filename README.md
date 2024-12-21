@@ -2,28 +2,27 @@
 
 ## Team Members
 
-- Shehap sherif mohamed
-- Mohey
-- Aser
-- Mohand
-- Elbig
-- Adham
+- شهاب شريف محمد
+- احمد محمد موجي
+- اسر حسام عبد الصادق
+- مهند محمد كمال
+- ادهم عبد النعيم
+- ادهم محمد رضا
 
 ## Project Overview
 
-This project combines the principles of **software development**, **data structures**, and **web technologies** to create an innovative and practical solution. The aim is to showcase the team's expertise and collaborative efforts in these domains.
+This project combines the principles of **software development**, **data structures**, and **web development** to create an innovative and practical solution. The aim is to showcase the team's expertise and collaborative efforts in these domains.
 
 ## Features
 
-- **Software Development**: Implementation of robust and scalable software solutions.
+- **Software engineering**: using git and github 
 - **Data Structures**: Efficient and optimized algorithms for data management.
-- **Web Technologies**: User-friendly interfaces and responsive web design.
+- **Web development**: using html, css, js
 
 ## Tools and Technologies
 
-- Programming Languages: [Specify languages, e.g., C++, JavaScript]
-- Frameworks: [Specify frameworks, e.g., React, Node.js]
-- Other Tools: [Specify tools, e.g., Git, VS Code]
+- Programming Languages: [Specify languages, e.g., C++, JavaScript, html, css]
+- Other Tools: [Specify tools, e.g.,github , Git, VS Code]
 
 ## How to Contribute
 
